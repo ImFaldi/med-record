@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { withExpoSnack } from 'nativewind';
+import { styled } from 'nativewind';
 
 export default function App() {
   return (

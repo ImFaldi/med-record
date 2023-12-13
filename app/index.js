@@ -1,15 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
-import { Link, router } from 'expo-router';
-
+import { Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 export default function App() {
-  return (
-    <View>
-        <Text>Hello World</Text>
-        <Link href="/user/1">User 1</Link>
-        <Pressable onPress={() => router.push('/user/2')}>
-            <Text>User 2</Text>
-        </Pressable>
-    </View>
-  );
+    return (
+        <View className="flex-1 items-center justify-center bg-black">
+            <Text>Open up App.js to start working on your app!</Text>
+            <StatusBar style="auto" />
+        </View>
+    );
 }
