@@ -40,7 +40,7 @@ export default function DashMenu() {
       </View>
       <View className="flex items-center mt-10">
         <Image
-            className="w-96 h-"
+            style={{width: 360, height: 162}}
             source={require("../../../assets/info.png")}
           />
         </View>
