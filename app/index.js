@@ -1,11 +1,17 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import LoginPage from './page/loginPage';
+import { ScrollView } from 'react-native';
+import Footer from './components/footer';
 import { StatusBar } from 'expo-status-bar';
+
 export default function App() {
     return (
-        <View className="flex-1 items-center justify-center bg-black">
-            <Text>Open up App.js to start working on your app!</Text>
+        <>
+            <ScrollView className="flex-1">
+                <LoginPage />
+            </ScrollView>
+            <Footer />
             <StatusBar style="auto" />
-        </View>
+        </>
     );
 }
