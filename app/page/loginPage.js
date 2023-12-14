@@ -3,7 +3,14 @@ import React from 'react';
 import { Text, View, Image, TouchableHighlight, TextInput, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { useState } from 'react';
+import { FIREBASE_AUTH } from '../../firebaseConfig';
+
 export default function LoginPage() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     return (
         <View className="flex-1 items-center bg-white mt-10">
             <Image
@@ -58,7 +65,7 @@ export default function LoginPage() {
 
             <View className="flex flex-row mt-5">
                 <Text className="text-gray-500">Don't have an account?</Text>
-                <Link href={'page/register/[register]'} className="text-blue-500 ml-2">Register</Link>
+                <Link href={'page/register/[register]'} className="text-blue-500 ml-2">Sign Up</Link>
             </View>
         </View>
     );
