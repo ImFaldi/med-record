@@ -11,7 +11,7 @@ export default function App() {
             <ScrollView className="flex-1">
                 <DashMenu />
             </ScrollView>
-            <Footer />
+            {/* <Footer /> */}
             <StatusBar style="auto" />
         </>
     );
