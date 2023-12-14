@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginPage from './page/loginPage';
+import LoginPage from './page/login/index';
 import { ScrollView } from 'react-native';
 import Footer from './components/footer';
 import { StatusBar } from 'expo-status-bar';
