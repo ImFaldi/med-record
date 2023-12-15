@@ -20,10 +20,10 @@ const DashMenu = () => {
       <ScrollView>
         <View className="flex flex-row items-center mt-10">
           <View>
-            <Text className="flex-1 items-center bg-white ml-10 text-blue-500 font-bold text-lg">
+            <Text className="flex-1 items-center bg-white ml-8 text-blue-500 font-bold text-lg">
               Hello,
             </Text>
-            <Text className="flex-1 items-center bg-white ml-10 text-grey-500 font-bold text-lg">
+            <Text className="flex-1 items-center bg-white ml-8 text-grey-500 font-bold text-lg">
               Ryan Wilson
             </Text>
           </View>
@@ -37,18 +37,18 @@ const DashMenu = () => {
             />
           </View>
         </View>
-        <View className="flex items-center mt-3">
+        <View className="flex items-center mt-3 ml-1">
           <Image
             style={{ width: 360, height: 162 }}
             source={require("../../../assets/info.png")}
           />
         </View>
-        <Text className="flex-1 items-center bg-white mt-2 ml-10 text-grey-500 font-semibold text-lg">
+        <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           Daily Activities
         </Text>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {/* Body Temperature */}
-          <View style={styles.container} className="ml-10">
+          <View style={styles.container} className="ml-8">
             <Text style={[styles.text, styles.textPosition]}>
               Body Temprature
             </Text>
@@ -114,11 +114,11 @@ const DashMenu = () => {
           </View>
         </ScrollView>
 
-        <Text className="flex-1 items-center bg-white mt-2 ml-10 text-grey-500 font-semibold text-lg">
+        <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           MedRecord Features
         </Text>
 
-        <View className="flex flex-row items-center bg-white mt-2 ml-10 ">
+        <View className="flex flex-row items-center bg-white mt-2 ml-8 ">
           <Pressable style={styles.familyRecordParent} onPress={() => {}}>
             <Text style={styles.Record}>Heart Rate</Text>
             <View style={[styles.groupParent, styles.groupLayout]}>
@@ -162,7 +162,7 @@ const DashMenu = () => {
           </Pressable>
         </View>
 
-        <View className="flex flex-row items-center bg-white mt-3 ml-10 ">
+        <View className="flex flex-row items-center bg-white mt-3 ml-8 ">
           <Pressable style={styles.familyRecordParent} onPress={() => {}}>
             <Text style={styles.RecordFam}>Steps Count</Text>
             <View style={[styles.groupParent, styles.groupLayout]}>
@@ -206,11 +206,11 @@ const DashMenu = () => {
           </Pressable>
         </View>
 
-        <Text className="flex-1 items-center bg-white mt-2 ml-10 text-grey-500 font-semibold text-lg">
+        <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           Customer Offers
         </Text>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <View className="flex items-center mt-2 ml-10">
+          <View className="flex items-center mt-2 ml-8">
           <Image
             source={require("../../../assets/iklan1.png")}
           />
