@@ -30,7 +30,7 @@ const DashMenu = () => {
           <View className="flex mx-auto">
             <Image className="w-12 h-12" />
           </View>
-          <View className="flex mx-auto">
+          <View className="flex mx-auto ml-20">
             <Image
               className="w-12 h-12"
               source={require("../../../assets/test.png")}
