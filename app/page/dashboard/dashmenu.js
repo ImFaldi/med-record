@@ -9,6 +9,7 @@ import {
   Button,
   ScrollView,
   StyleSheet,
+  Pressable,
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -45,13 +46,188 @@ const DashMenu = () => {
         <Text className="flex-1 items-center bg-white mt-2 ml-10 text-grey-500 font-semibold text-lg">
           Daily Activities
         </Text>
-        <View style={styles.container}>
-          <Text style={[styles.input, styles.textPosition]}>
-            Body Temprature
-          </Text>
-          <Text style={[styles.text, styles.textPosition]}>36.1</Text>
-          <Text style={[styles.minitext, styles.textPosition]}>Celcius</Text>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          {/* Body Temperature */}
+          <View style={styles.container} className="ml-10">
+            <Text style={[styles.text, styles.textPosition]}>
+              Body Temprature
+            </Text>
+            <Text style={[styles.input, styles.textPosition]}>36.1</Text>
+            <Text style={[styles.minitext, styles.textPosition]}>Celcius</Text>
+            <Image
+              style={styles.groupItem}
+              contentFit="cover"
+              source={require("../../../assets/temp.png")}
+            />
+          </View>
+
+          {/* Heart Rate */}
+          <View style={styles.container} className="ml-3">
+            <Text style={[styles.text, styles.textPosition]}>Heart Rate</Text>
+            <Text style={[styles.input, styles.textPosition]}>120</Text>
+            <Text style={[styles.minitext, styles.textPosition]}>BPM</Text>
+            <Image
+              style={styles.groupItem}
+              contentFit="cover"
+              source={require("../../../assets/heart.png")}
+            />
+          </View>
+
+          {/* Water Intake */}
+          <View style={styles.container} className="ml-3">
+            <Text style={[styles.text, styles.textPosition]}>Water Intake</Text>
+            <Text style={[styles.input, styles.textPosition]}>2000</Text>
+            <Text style={[styles.minitext, styles.textPosition]}>
+              Mililiters
+            </Text>
+            <Image
+              style={styles.groupItem}
+              contentFit="cover"
+              source={require("../../../assets/water.png")}
+            />
+          </View>
+
+          {/* Steps Count */}
+          <View style={styles.container} className="ml-3">
+            <Text style={[styles.text, styles.textPosition]}>Steps Count</Text>
+            <Text style={[styles.input, styles.textPosition]}>5000</Text>
+            <Text style={[styles.minitext, styles.textPosition]}>Steps</Text>
+            <Image
+              style={styles.groupItem}
+              contentFit="cover"
+              source={require("../../../assets/steps.png")}
+            />
+          </View>
+
+          {/* Sleep Overview */}
+          <View style={styles.container} className="ml-3">
+            <Text style={[styles.text, styles.textPosition]}>
+              Sleep Overview
+            </Text>
+            <Text style={[styles.input, styles.textPosition]}>08.30</Text>
+            <Text style={[styles.minitext, styles.textPosition]}>Hours</Text>
+            <Image
+              style={styles.groupItem}
+              contentFit="cover"
+              source={require("../../../assets/sleep.png")}
+            />
+          </View>
+        </ScrollView>
+
+        <Text className="flex-1 items-center bg-white mt-2 ml-10 text-grey-500 font-semibold text-lg">
+          MedRecord Features
+        </Text>
+
+        <View className="flex flex-row items-center bg-white mt-2 ml-10 ">
+          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
+            <Text style={styles.Record}>Heart Rate</Text>
+            <View style={[styles.groupParent, styles.groupLayout]}>
+              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
+                <View style={[styles.groupChild, styles.groupLayout]} />
+              </View>
+              <Image
+                style={styles.vectorIcon}
+                contentFit="cover"
+                source={require("../../../assets/h.png")}
+              />
+            </View>
+          </Pressable>
+
+          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
+            <Text style={styles.Record}>Body Temp</Text>
+            <View style={[styles.groupParent, styles.groupLayout]}>
+              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
+                <View style={[styles.groupChild, styles.groupLayout]} />
+              </View>
+              <Image
+                style={styles.vectorIconBody}
+                contentFit="cover"
+                source={require("../../../assets/t.png")}
+              />
+            </View>
+          </Pressable>
+
+          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
+            <Text style={styles.RecordFam}>Family Record</Text>
+            <View style={[styles.groupParent, styles.groupLayout]}>
+              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
+                <View style={[styles.groupChild, styles.groupLayout]} />
+              </View>
+              <Image
+                style={styles.vectorIconFam}
+                contentFit="cover"
+                source={require("../../../assets/f.png")}
+              />
+            </View>
+          </Pressable>
         </View>
+
+        <View className="flex flex-row items-center bg-white mt-3 ml-10 ">
+          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
+            <Text style={styles.RecordFam}>Steps Count</Text>
+            <View style={[styles.groupParent, styles.groupLayout]}>
+              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
+                <View style={[styles.groupChild, styles.groupLayout]} />
+              </View>
+              <Image
+                style={styles.vectorIconSteps}
+                contentFit="cover"
+                source={require("../../../assets/s.png")}
+              />
+            </View>
+          </Pressable>
+
+          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
+            <Text style={styles.RecordFam}>Water Intake</Text>
+            <View style={[styles.groupParent, styles.groupLayout]}>
+              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
+                <View style={[styles.groupChild, styles.groupLayout]} />
+              </View>
+              <Image
+                style={styles.vectorIconWater}
+                contentFit="cover"
+                source={require("../../../assets/w.png")}
+              />
+            </View>
+          </Pressable>
+
+          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
+            <Text style={styles.RecordView}>Sleep Overview</Text>
+            <View style={[styles.groupParent, styles.groupLayout]}>
+              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
+                <View style={[styles.groupChild, styles.groupLayout]} />
+              </View>
+              <Image
+                style={styles.vectorIconMoon}
+                contentFit="cover"
+                source={require("../../../assets/m.png")}
+              />
+            </View>
+          </Pressable>
+        </View>
+
+        <Text className="flex-1 items-center bg-white mt-2 ml-10 text-grey-500 font-semibold text-lg">
+          Customer Offers
+        </Text>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View className="flex items-center mt-2 ml-10">
+          <Image
+            source={require("../../../assets/iklan1.png")}
+          />
+          </View>
+
+          <View className="flex items-center mt-2 ml-3">
+          <Image
+            source={require("../../../assets/iklan2.png")}
+          />
+          </View>
+
+          <View className="flex items-center mt-2 ml-3">
+          <Image
+            source={require("../../../assets/iklan3.png")}
+          />
+          </View>
+        </ScrollView>
       </ScrollView>
     </View>
   );
@@ -64,7 +240,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     marginTop: 5,
-    marginLeft: 40,
     borderRadius: 15,
     width: 168,
     height: 105,
@@ -78,16 +253,16 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
 
-  input: {
+  text: {
     top: 12,
     fontWeight: "500",
     textAlign: "left",
     left: 20,
   },
 
-  text: {
-    top: 28,
-    fontSize: 36,
+  input: {
+    top: 32,
+    fontSize: 30,
     fontWeight: "800",
     color: "#5a5a5a",
     textAlign: "left",
@@ -100,6 +275,118 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     textAlign: "left",
     left: 20,
+  },
+  groupItem: {
+    height: 33,
+    width: 33,
+    top: 39,
+    right: "15.33%",
+    bottom: "34.29%",
+    left: 120,
+    maxWidth: "100%",
+    overflow: "hidden",
+    maxHeight: "100%",
+    position: "absolute",
+  },
+
+  groupLayout: {
+    height: 61,
+    width: 60,
+    top: 0,
+    position: "absolute",
+  },
+  Record: {
+    top: 60,
+    fontSize: 10,
+    fontWeight: "600",
+    textAlign: "center",
+    width: 60,
+    position: "absolute",
+  },
+
+  RecordFam: {
+    top: 60,
+    fontSize: 10,
+    fontWeight: "600",
+    textAlign: "center",
+    width: 70,
+    right: 57,
+    position: "absolute",
+  },
+
+  RecordView: {
+    top: 60,
+    fontSize: 10,
+    fontWeight: "600",
+    textAlign: "center",
+    width: 80,
+    right: 55,
+    position: "absolute",
+  },
+
+  groupChild: {
+    borderRadius: 10,
+    backgroundColor: "#67bfff",
+    left: 0,
+  },
+  rectangleWrapper: {
+    left: 0,
+  },
+  vectorIcon: {
+    width: 36,
+    height: 34,
+    top: 15,
+    left: 12,
+    position: "absolute",
+  },
+
+  vectorIconBody: {
+    width: 37,
+    height: 37,
+    top: 13,
+    left: 15,
+    position: "absolute",
+  },
+
+  vectorIconFam: {
+    width: 38,
+    height: 29,
+    top: 15,
+    left: 11,
+    position: "absolute",
+  },
+
+  vectorIconSteps: {
+    width: 33,
+    height: 41,
+    top: 10,
+    left: 14,
+    position: "absolute",
+  },
+
+  vectorIconWater: {
+    width: 25,
+    height: 34,
+    top: 13,
+    left: 18,
+    position: "absolute",
+  },
+
+  vectorIconMoon: {
+    width: 29,
+    height: 29,
+    top: 16,
+    left: 17,
+    position: "absolute",
+  },
+
+  groupParent: {
+    left: 1,
+  },
+  familyRecordParent: {
+    flex: 1,
+    width: "100%",
+    height: 75,
   },
 });
 
