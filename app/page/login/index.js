@@ -4,17 +4,14 @@ import { Text, View, Image, TouchableHighlight, TextInput, Button, ActivityIndic
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { useState } from 'react';
-import { FIREBASE_AUTH } from '../../../firebaseConfig';
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const auth = FIREBASE_AUTH
     const signIn = async () => {
         setIsSubmitting(true);
         try {
-            await auth?.signInWithEmailAndPassword(auth,email, password);
             alert('Check your email and password');
         } catch (e) {
             console.error(e);

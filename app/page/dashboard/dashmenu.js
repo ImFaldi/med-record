@@ -15,6 +15,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Header from "../../components/header";
 import SlideCards from "../../components/slidecards";
+import Menu from "../../components/menu";
 
 const DashMenu = () => {
   return (
@@ -39,123 +40,37 @@ const DashMenu = () => {
             />
           </View>
         </View>
-        <Header/>
+        <Header />
         <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           Daily Activities
         </Text>
-        <SlideCards/>
+        <SlideCards />
         <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           MedRecord Features
         </Text>
 
-        <View className="flex flex-row items-center bg-white mt-2 ml-8 ">
-          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
-            <Text style={styles.Record}>Heart Rate</Text>
-            <View style={[styles.groupParent, styles.groupLayout]}>
-              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
-                <View style={[styles.groupChild, styles.groupLayout]} />
-              </View>
-              <Image
-                style={styles.vectorIcon}
-                contentFit="cover"
-                source={require("../../../assets/h.png")}
-              />
-            </View>
-          </Pressable>
-
-          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
-            <Text style={styles.Record}>Body Temp</Text>
-            <View style={[styles.groupParent, styles.groupLayout]}>
-              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
-                <View style={[styles.groupChild, styles.groupLayout]} />
-              </View>
-              <Image
-                style={styles.vectorIconBody}
-                contentFit="cover"
-                source={require("../../../assets/t.png")}
-              />
-            </View>
-          </Pressable>
-
-          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
-            <Text style={styles.RecordFam}>Family Record</Text>
-            <View style={[styles.groupParent, styles.groupLayout]}>
-              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
-                <View style={[styles.groupChild, styles.groupLayout]} />
-              </View>
-              <Image
-                style={styles.vectorIconFam}
-                contentFit="cover"
-                source={require("../../../assets/f.png")}
-              />
-            </View>
-          </Pressable>
-        </View>
-
-        <View className="flex flex-row items-center bg-white mt-3 ml-8 ">
-          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
-            <Text style={styles.RecordFam}>Steps Count</Text>
-            <View style={[styles.groupParent, styles.groupLayout]}>
-              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
-                <View style={[styles.groupChild, styles.groupLayout]} />
-              </View>
-              <Image
-                style={styles.vectorIconSteps}
-                contentFit="cover"
-                source={require("../../../assets/s.png")}
-              />
-            </View>
-          </Pressable>
-
-          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
-            <Text style={styles.RecordFam}>Water Intake</Text>
-            <View style={[styles.groupParent, styles.groupLayout]}>
-              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
-                <View style={[styles.groupChild, styles.groupLayout]} />
-              </View>
-              <Image
-                style={styles.vectorIconWater}
-                contentFit="cover"
-                source={require("../../../assets/w.png")}
-              />
-            </View>
-          </Pressable>
-
-          <Pressable style={styles.familyRecordParent} onPress={() => {}}>
-            <Text style={styles.RecordView}>Sleep Overview</Text>
-            <View style={[styles.groupParent, styles.groupLayout]}>
-              <View style={[styles.rectangleWrapper, styles.groupLayout]}>
-                <View style={[styles.groupChild, styles.groupLayout]} />
-              </View>
-              <Image
-                style={styles.vectorIconMoon}
-                contentFit="cover"
-                source={require("../../../assets/m.png")}
-              />
-            </View>
-          </Pressable>
-        </View>
+        <Menu />
 
         <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           Customer Offers
         </Text>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <View className="flex items-center mt-2 ml-8">
-          <Image
-            source={require("../../../assets/iklan1.png")}
-          />
+            <Image
+              source={require("../../../assets/iklan1.png")}
+            />
           </View>
 
           <View className="flex items-center mt-2 ml-3">
-          <Image
-            source={require("../../../assets/iklan2.png")}
-          />
+            <Image
+              source={require("../../../assets/iklan2.png")}
+            />
           </View>
 
           <View className="flex items-center mt-2 ml-3">
-          <Image
-            source={require("../../../assets/iklan3.png")}
-          />
+            <Image
+              source={require("../../../assets/iklan3.png")}
+            />
           </View>
         </ScrollView>
       </ScrollView>
