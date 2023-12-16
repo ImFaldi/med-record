@@ -10,10 +10,12 @@ import {
   ScrollView,
   StyleSheet,
   Pressable,
+  TouchableWithoutFeedback
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 export default function Menu() {
+    return(
     <View className="flex flex-row mx-auto mt-5 mb-5">
         <Link href="/medrecord"
             className="mx-4">
@@ -31,10 +33,6 @@ export default function Menu() {
                 />
             </View>
         </Link>
-        {/* buatkan text dibawah Link Health Record */}
-        <Text className="">
-            Health Record
-        </Text>
 
         <Link href="/medrecord"
             className="mx-4">
@@ -68,14 +66,15 @@ export default function Menu() {
                 />
             </View>
         </Link>
-        <Link href="/medrecord"
-            className="mx-4">
-            <View className="border-none mt-5 rounded-lg mx-2 w-3/4 bg-blue-400 flex flex-row items-center justify-center w-16 h-16">
+        <TouchableWithoutFeedback>
+            <View className="border-none rounded-lg mx-2 w-3/4 bg-blue-400 flex flex-row items-center justify-center w-16 h-16">
                 {/* <Text className="font-semibold text-center text-lg text-white">
                 Medical Record
               </Text> */}
-                <FontAwesome5 name="ellipsis-h" size={34} color="white" />
+                <FontAwesome5 name="ellipsis-h" size={24} color="white" />
             </View>
-        </Link>
+        </TouchableWithoutFeedback>
     </View>
+    );
+
 }
