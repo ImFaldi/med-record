@@ -16,7 +16,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 
 export default function Menu() {
     return(
-    <View className="flex flex-row mx-auto mt-5 mb-5">
+    <View className="flex flex-row mx-auto mt-5 mb-2">
         <Link href="/medrecord"
             className="mx-4">
             <View className="border-none mt-5 rounded-lg mx-2 w-3/4 bg-blue-400 flex flex-row items-center justify-center w-16 h-16">
