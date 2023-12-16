@@ -13,6 +13,8 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { FontAwesome5 } from "@expo/vector-icons";
+import Header from "../../components/header";
+import SlideCards from "../../components/slidecards";
 
 const DashMenu = () => {
   return (
@@ -37,83 +39,11 @@ const DashMenu = () => {
             />
           </View>
         </View>
-        <View className="flex items-center mt-3 ml-1">
-          <Image
-            style={{ width: 360, height: 162 }}
-            source={require("../../../assets/info.png")}
-          />
-        </View>
+        <Header/>
         <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           Daily Activities
         </Text>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          {/* Body Temperature */}
-          <View style={styles.container} className="ml-8">
-            <Text style={[styles.text, styles.textPosition]}>
-              Body Temprature
-            </Text>
-            <Text style={[styles.input, styles.textPosition]}>36.1</Text>
-            <Text style={[styles.minitext, styles.textPosition]}>Celcius</Text>
-            <Image
-              style={styles.groupItem}
-              contentFit="cover"
-              source={require("../../../assets/temp.png")}
-            />
-          </View>
-
-          {/* Heart Rate */}
-          <View style={styles.container} className="ml-3">
-            <Text style={[styles.text, styles.textPosition]}>Heart Rate</Text>
-            <Text style={[styles.input, styles.textPosition]}>120</Text>
-            <Text style={[styles.minitext, styles.textPosition]}>BPM</Text>
-            <Image
-              style={styles.groupItem}
-              contentFit="cover"
-              source={require("../../../assets/heart.png")}
-            />
-          </View>
-
-          {/* Water Intake */}
-          <View style={styles.container} className="ml-3">
-            <Text style={[styles.text, styles.textPosition]}>Water Intake</Text>
-            <Text style={[styles.input, styles.textPosition]}>2000</Text>
-            <Text style={[styles.minitext, styles.textPosition]}>
-              Mililiters
-            </Text>
-            <Image
-              style={styles.groupItem}
-              contentFit="cover"
-              source={require("../../../assets/water.png")}
-            />
-          </View>
-
-          {/* Steps Count */}
-          <View style={styles.container} className="ml-3">
-            <Text style={[styles.text, styles.textPosition]}>Steps Count</Text>
-            <Text style={[styles.input, styles.textPosition]}>5000</Text>
-            <Text style={[styles.minitext, styles.textPosition]}>Steps</Text>
-            <Image
-              style={styles.groupItem}
-              contentFit="cover"
-              source={require("../../../assets/steps.png")}
-            />
-          </View>
-
-          {/* Sleep Overview */}
-          <View style={styles.container} className="ml-3">
-            <Text style={[styles.text, styles.textPosition]}>
-              Sleep Overview
-            </Text>
-            <Text style={[styles.input, styles.textPosition]}>08.30</Text>
-            <Text style={[styles.minitext, styles.textPosition]}>Hours</Text>
-            <Image
-              style={styles.groupItem}
-              contentFit="cover"
-              source={require("../../../assets/sleep.png")}
-            />
-          </View>
-        </ScrollView>
-
+        <SlideCards/>
         <Text className="flex-1 items-center bg-white mt-2 ml-8 text-grey-500 font-semibold text-lg">
           MedRecord Features
         </Text>
